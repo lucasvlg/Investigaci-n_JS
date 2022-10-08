@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script src="JS/script.js" type="text/javascript"></script>
+
+    <title>Trabajo Prácitco Nº6 - Programación Estática</title>
+</head>
+<body>
+    <div class="nombre">
+        <h2 class="nombre">Alumno: Villegas Lucas</h2>
+        <h2 class="nombre">Carrera: Técnico Programador</h2>
+    </div>
+    <div class="logo">
+        <img src="imagenes/logo_epet20.png" alt="logo" width="80px" height="100px">
+    </div>
+    <h1 class="titulo">Trabajo Práctico Nº6 - Tema: INVESTIGACIÓN JS</h1>
+    <div>
+        <div class="1">
+            <h2>1) ¿Qué versiones de JavaScript hay en el mercado?</h2>
+            <ol>
+                <li><b>JavaScript 1:</b> Creado junto con Netscape 2.0, aguanta una gran cantidad de instrucciones y funciones, todas estas ya introducidas en su versión estándar.</li>
+                <li><b>JavaScript 1.1:</b> Versión diseñada con el lanzamiento de navegadores 3.0. Es muy similar a su version anterior, sólo se le incorporó el procesamiento dinámico de imágenes y la creación de matrices.</li>
+                <li><b>JavaScript 1.2:</b> Versión diseñada con el lanzamiento de los navegadores 4.0. Tenía como desventaja que era un poco diferente en las plataformas de Microsoft y Netscape, porque los dos navegadores habían evolucionado de manera diferente y ambos competían por el mercado.</li>
+                <li><b>JavaScript 1.3:</b> Versión diseñada para navegadores 5.0. Ya con esta versión no había diferencias entre plataformas.</li>
+                <li><b>JavaScript 1.5:</b> Versión actual de JavaScript.</li>
+                <li><b>ECMAScript 5:</b> Versión lanzada en 2009, funciona en todos los navegadores.</li>
+                <li><b>ECMAScript 6:</b> Versión lanzada en 2015, tuvo muchas mejoras importantes, la mayoría de desarrolladores profesionales la utilizan, funciona en todos los navegadores, menos en Internet Explorer.</li>
+                <li><b>ECMAScript 7:</b> Versión lanzada en 2016, actualización de ES6. Se incorporó: El método Array.prototype.includes() y el operador exponencial (**).</li>
+                <li><b>ECMAScript 8:</b> Versión lanzada en 2017, conocida como ECMAScript 2017. Se le incorporó: async/await, las cuales funcionan usando generadores y promesas.</li>
+                <li><b>ECMAScript 9:</b> Versión lanzada en 2018, conocida como ECMAScript 2018. Se le incorporó: operadores rest/spread para variables (tres puntos: ...identificador), iteracion asincronica, Promise.prototype.finally().</li>
+                <li><b>ECMAScript 10:</b> Versión lanzada en 2019, conocida como ECMAScript 2019. Se le incorporó: Array.flat(), Array.flatMap(), String.trimStart(), String.trimEnd(), errores opcionales en el bloque catch, Object.fromEntries(), Symbol.description.</li>
+                <li><b>ECMAScript 11:</b> Versión lanzada en 2020, conocida como ECMAScript 2020. Aparte de tener nuevas funciones, a esta versión se le añadieron tipos primitivos BigInt para enteros primitive, el operador de unión nula (nullish coalescing), encadenamiento opcional (optional chaining) y el objeto globalThis.</li>
+                <li><b>ECMAScript 12:</b> Versión lanzada en 2021, conocida como ECMAScript 2021. Es la última versión de JavaScript, diseñada en github por la compañía ECMA International. Se le incoporaron las siguientes funciones: Operador de asignación lógica, método .replaceAll(), métodos de clase privados, getters y setters privados, promise.any(), aggregateError y weakRef.</li>
+            </ol>
+        </div>
+        <div class="2">
+            <h2>2) ¿Cómo se integra JavaScript a HTML?</h2>
+            <p><b>Hay 2 formas de integrar JavaScript a HTML.</b><br>
+                <b>La primera</b> es con el atributo "src" dentro de la etiqueta <b>&lt;script&gt;</b>, se recomienda agregarlo en la sección <b>&lt;head&gt;</b> para separlo de nuestro contenido HTML. <br>
+                Este atributo nos permite enlazar la ruta de nuestro documento personalizado .js. <br>
+                Por ejemplo:<b> &lt;script src="js/script.js"&gt;&lt;/script&gt;</b>. <br>
+                O también podemos enlazar documentos externos de un tercero de la siguiente manera: <br> <b>&lt;script src="https://kit.fontawesome.com/c28dc5c839.js"&gt;&lt;/script&gt;</b>. <br>
+                <b>La segunda</b> manera es aplicando nuestro código js dentro la etiqueta <b>&lt;script&gt;&lt;/script&gt;</b>  dentro de la sección <b>&lt;body&gt;</b>. <br> 
+                Esta manera la utilizaremos si queremos mostrar nuestro contenido js dentro del cuerpo de nuestra página web.
+            </p>
+        </div>
+        <div class="3">
+            <h2>3) ¿Cómo es el manejo de las variables, tipos de datos y expresiones regulares en JS?</h2>
+            <p>
+                <b>Variables</b>: En JavaScript para declarar variables se utilizan las palabras clave var, const y let. <br>
+                Estas variables las utilizamos para guardar y registrar datos para refirnos a ello a lo largo de nuestro código. <br>
+                <b>Var</b>: Esta palabra nos permite declarar variables y adicionalmente le podemos inicializar un valor. <br>
+                Por ejemplo: <br>
+                var edad = 10;. <br>
+                console.log(edad); // salida "10". <br>
+                <br>
+                <b>Let</b>: Esta palabra nos permite declarar variables limitadas por un bloque. Es decir, todo lo que está dentro de llaves {} es un bloque. <br>
+                Por ejemplo: <br>
+                if (true) { <br>
+                let nombre = Lucas; <br>
+                console.log(nombre); // salida "Lucas" <br>
+                } <br>
+                <br>
+                <b>Const</b>: Esta palabra nos permite declarar variables con valores constantes. Es muy parecido a let, ya que solamente <br> podemos acceder a nuestras declaraciones const dentro del bloque en el que fueron declaradas. <br>
+                La diferencia con let es que const no puede modificarse ni volver a declararse, entonces toda declaración const, debemos inicializada en el momento de la declaración. <br>
+                Por ejemplo: <br>
+                const nombre = { <br>
+                    mensaje: "Lucas", <br>
+                    edad: 18 <br>
+                } <br>
+                <br>
+                <b>Tipos de datos:</b>: La última versión de ECMAScript define nueve tipos de datos:<br>
+                <ol>
+                    <li><b>Undefined</b>: Solo se asigna automáticamente el valor inicial de las variables declaradas o parámetros formales, sin los parámetros reales.<br>
+                    Se asigna de la siguiente manera:<br>
+                    <b>typeof instance === "undefined"</b></li>
+                    <li><b>Boolean</b>: Dato lógico que puede tener solamente valores "true" o "false".<br>
+                    Se asigna de la siguiente manera:<br>
+                    <b>typeof instance === "boolean"</b></li>
+                    <li><b>Number</b>: Tipo de dato numérico.</li>
+                    Se asigna de la siguiente manera:<br>
+                    <b>typeof instance === "number"</b></li>
+                    <li><b>String</b>: Secuencia de caracteres utilizada para representar un texto.<br>
+                    Se asigna de la siguiente manera:<br>
+                    <b>typeof instance === "string"</b></li>
+                    <li><b>BigInt</b>: Tipo de dato numérico que representa números enteros en el formato de precision arbitrario.<br>
+                    Se asigna de la siguiente manera:<br>
+                    <b>typeof instance === "bigint"</b></li>
+                    <li><b>Symbol</b>: Este tipo representa un identificador único.<br>
+                    Se asigna de la siguiente manera:<br>
+                    <b>typeof instance === "string"</b></li>
+                    <li><b>Null</b>: Valor nulo declarado, comúnmente de manera intencional, a un inexistente objeto o dirección, si el objeto no se ejecuta, se muestra null.<br>
+                    Se asigna de la siguiente manera:<br>
+                    <b>typeof instance === "null"</b></li>
+                    <li><b>Object</b>: Este tipo se aplica a una estructura de datos que contiene datos e instrucciones para trabajar con esos datos. Por lo general siempre se refiere a cosas del mundo real.<br>
+                    Se asigna de la siguiente manera:<br>
+                    <b>typeof instance === "object"</b></li>
+                    <li><b>Function</b>: Parte del código que puede ser llamada por otro código, o por una variable que llame a la función.<br>
+                    Se asigna de la siguiente manera:<br>
+                    <b>typeof instance === "function"</b></li>
+                </ol>
+                <b>Expresiones Regulares</b>: Es un sistema para buscar, capturar o reemplazar texto mediante patrones, las expresiones regulares son objetos. <br>
+                Estos patrones se utilizan con los métodos:
+                <ul>
+                    <li><b>exec()</b>: Ejecuta una coincidencia en una cadena. Devuelve una matriz de datos o null si no hay ninguna coincidencia.</li>
+                    <li><b>test()</b>: Ejecuta una coincidencia en una cadena. Devuelve una salida true o false.</li>
+                    <li><b>match()</b>: Devuelve una matriz de todas las coincidencias, incluidos los grupos de captura, o null si no se encontró ninguna coincidencia.</li>
+                    <li><b>matchAll()</b>: Devuelve una salida que contiene todas las coincidencias, incluidos los grupos de captura.</li>
+                    <li><b>search()</b>: Intenta una coincidencia en una cadena. Devuelve el índice de esa coincidencia, o -1 si no coincide.</li>
+                    <li><b>replace()</b>: Realiza una búsqueda coincidente en una cadena y reemplaza la subcadena coincidente con otra subcadena de reemplazo.</li>
+                    <li><b>replaceAll()</b>: Realiza una búsqueda de todas las coincidencias de una cadena y reemplaza la subcadena coincidente con otra subcadena de reemplazo.</li>
+                    <li><b>split()</b>: Divide una cadena en una serie de subcadenas usando una expresión regular o una cadena fija.</li>
+                </ul>
+            </p>
+        </div>
+        <div class="4">
+            <h2>4) ¿Cómo son todas las formas de declaración de funciones en JS?</h2>
+            <h4>Hay 7 formas de declarar una función en JavaScript:</h4>
+            <ol>
+                <li><b>Function declaration</b>: Esta función se creará utilizando la palabra function, seguida de un nombre que identifique nuestra función y <br>
+                un conjunto de parámetros entre paréntesis () y llaves {}. Lo cual determinará el contenido de nuestro conjunto de sentencias. <br>
+                Por ejemplo: <br>
+                function hola(nombre){ <br>
+                    console.log("Hola ${nombre}.") <br>
+               } <br>
+               hola("Lucas"); // salida Hola Lucas.</li>
+                <li><b>Function expression</b>: Similar a function declaration, la única diferencia es que esta función no comienza con una declaración function <br>
+                y el nombre de la función es opcional.<br>
+                Las funciones de este tipo se pueden almacenar en una variable. <br>
+                Por ejemplo:<br>
+                const suma = function sumaTres(valor) { <br>
+                    return valor + 3; <br>
+               } <br>
+               console.log(sumatres(7)); // salida 10.</li>
+                <li><b>IIFE (Immediately Invoked Function Expression)</b>: Cuando definimos una función es porque la llamaremos varias veces, pero si queremos<br> 
+                llamar a la función solo una vez y obtener el resultado, podemos utilizar la función IIFE. Estos tipos de funciones se realizan de inmediato y no se puede acceder luego. <br>
+                Por ejemplo: <br>
+                ( function () { <br>
+                    let nombre = "Lucas" <br>
+                    return "Hola ${nombre}" <br>
+                })() // salida Hola Lucas <br></li>
+                <li><b>Shorthand method definition</b>: Para crear esta función, necesitamos darle un nombre a la función luego, una lista de parámetros<br> 
+                entre paréntesis () y llaves {} para encerrar el cuerpo de instrucciones. <br>
+                Por ejemplo: <br>
+                const gente = {<br>
+                    personas: [],<br>
+                    add(...personas) {<br>
+                      this.personas.push(...personas);<br>
+                    },<br>
+                    saluda(index) {<br>
+                      return "Hola ${this.personas[index]}";<br>
+                    }<br>
+                  };<br>
+                  gente.add('Lucas', 'Álvaro', 'José');<br>
+                  gente.saluda(1) // salida Hola Álvaro.</li>
+                <li><b>Arrow function</b>: Además de que la conexión es diferente a las anteriores, este tipo de función tiene las siguientes características. <br>
+                    <ul>
+                        <li>Esta función no crea su propio contexto cuando se ejecuta. A diferencia de "function expression" o "function declaration" que si crean su propio contexto.</li>
+                        <li>Esta función es anónima.</li>
+                        <li>Si no utilizamos llaves {} al definir nuestra función, esta misma nos dará como resultado la ejecución de instrucciones que hayamos introducido.</li>
+                    </ul>
+                Ejemplo: <br>
+                const saluda = (nombre) => {<br>
+                    return "Hola ${nombre}";<br>
+                 }<br>
+                 console.log(saluda("Lucas")) // salida Hola Lucas.</li>
+                <li><b>Generator function</b>: La característica más notable de esta función, es que nos permite pausar o finalizar la función en algún punto<br> 
+                de la ejecución de instrucciones compuesta por la función, y luego reanudarla desde donde la detuvimos anteriormente.<br>
+                Solo necesitamos utilizar el símbolo * al principio de la definición para indicar esta función. <br>
+                Por ejemplo: <br>
+                function *generatorFunction()<br>
+                { <br>
+                console.log("Ejemplo generator Function.");<br>
+                yield 'Hola'; <br>
+                console.log('¿Continuar?');<br>
+                yield 'Fin del ejemplo';<br>
+                }<br>
+                const gen = generatorFunction();<br>
+                console.log(gen.next().value);<br>               
+                console.log('Función pausada');<br>
+                console.log(gen.next().value);<br>
+                console.log(gen.next().value);<br>
+                <br>
+                Salida:<br>
+                // Ejemplo generator Function.<br>
+                // Hola<br>
+                // Función pausada<br>
+                // ¿Continuar?<br>
+                // Fin del ejemplo<br>
+                // undefined</li>
+                <li><b>Function constructor</b>: Función bastante inusual, esta función crea un nuevo objeto function. Entonces podemos crear<br> 
+                una variable que llame al objeto de función. Cuando llamamos a este objeto, podemos pasar cualquier parámetro que queramos. <br>
+                Por ejemplo: <br>
+                const sumaFunction = new Function('num1', 'num2',<br>
+                'return num1 + num2'<br>
+                );<br>
+                console.log(sumaFunction(8, 12)) // salida 20.</li>
+            </ol>
+        </div>
+        <div class="5">
+            <h2>5) ¿Cuáles son los operadores y conversión entre tipos?</h2>
+            <p><b>Operadores</b>: Los operadores nos permiten manejar los valores de nuestras variables, hacer operaciones matemáticas con esos valores y comparar variables.</p>
+            <h4>Tipos de Operadores:</h4>
+            <ol>
+                <li>
+                    <b>Asignación</b>: Es el operador más usado y el más fácil. Se usa para guardar valores específicos dentro de una variable. <br>
+                    Su símbolo es: <b>=</b>. <br>
+                    Ejemplo: <br>
+                    var num1 = 10;
+                </li>
+                <li>
+                    <b>Incremento y decremento</b>: Operadores que sólo sirven para asignar variables numéricas.<br> 
+                    Se usan para incrementar o decrementar en una unidad el valor de nuestra variable. <br>
+                    <b>(Incremento)</b> Su símbolo es: <b>++</b>. <br>
+                    Ejemplo: <br>
+                    var num1 = 9; <br>
+                    ++num1; <br>
+                    alert(num1);  // num1 = 10 <br>
+                    <b>(Decremento)</b> Su símbolo es: <b>--</b>. <br>
+                    Ejemplo: <br>
+                    var num2 = 6; <br>
+                    --num2; <br>
+                    alert(num2);  // num2 = 5
+                </li>
+                <li>
+                    <b>Lógicos</b>: Operadores utilizados para determinar qué instrucciones debe ejecutar el programa según ciertas condiciones. <br>
+                    <b>Símbolos</b>:
+                    <ul>
+                        <li><b>+, -, *, /</b>: Suma, resta, multiplicación y divisón.</li>
+                        <li><b>!</b>: Negación.</li>
+                        <li><b>&&</b>: Operador and (y).</li>
+                        <li><b>||</b>: Operador or (o).</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Relacionales</b>: Operadores parecidos a los que definimos para las matématicas. <br>
+                    <b>Símbolos</b>: <br>
+                    <ul>
+                        <li><b><</b>: Menor que.</li>
+                        <li><b><=</b>: Menor o igual.</li>
+                        <li><b>></b>: Mayor que.</li>
+                        <li><b>>=</b>: Mayor o igual.</li>
+                        <li><b>==</b>: Igual que.</li>
+                        <li><b>!=</b>: Distinto de.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p><b>conversiones de tipo</b>: Los operadores y funciones transforman de manera automática los valores que se les pasan de la manera correcta. A esto se le llama "conversión de tipo".</p>
+            <h4>Las tres conversiones de tipo:</h4>
+            <ol>
+                <li>
+                    <b>ToString</b>: Ocurre cuando se manifiesta un valor en forma de texto.<br>
+                    Ejemplo: <br>
+                    let value = false;<br>
+                    alert(typeof value);<br>
+                    value = String(value); // value pasa a ser el string "false"<br>
+                    alert(typeof value); // string
+                </li>
+                <li>
+                    <b>ToNumber</b>: Ocurre en conversiones numéricas. <br>
+                    Ejemplo: <br>
+                    let a = "55";<br>
+                    alert(typeof a); // string<br>
+                    let num = Number(a); // se convierte en 55<br>
+                    alert(typeof num); // num = 55
+                </li>
+                <li>
+                    <b>ToBoolean</b>: Ocurre con las operaciones lógicas.<br>
+                    Ejemplo:<br>
+                    var falso = new Boolean(false);  // valor inicial de false<br>
+                    var a = Boolean(falso);  // valor inicial de true<br>
+                    var s = new String("Hola");  // objeto string<br>
+                    var b = Boolean(s);  // valor inicial de true
+                </li>
+            </ol>
+        </div>
+        <div class="6">
+            <h2>6) ¿Cuáles son las estructuras de control de JS?</h2>
+            <h4>Las estructuras de control de JavaScript son:</h4>
+            <ul>
+                <li>
+                    <b>IF</b>: Una declaración if especifica un bloque de código para ejecutar si nuestra condición es verdadera. <br>
+                    Ejemplo:<br>
+                    if(condición){<br>
+                        // Instrucciones si la condición es verdadera<br>
+                    }
+                </li>
+                <li>
+                    <b>IF/ELSE</b>: Una declaración if especifica un bloque de código para ejecutar si nuestra condición es verdadera y la opción de ejecutar otro bloque de código si la condición no es verdadera. <br>
+                    Ejemplo:<br>
+                    if(condición){<br>
+                        // Instrucciones si la condición es verdadera<br>
+                    }else{<br>
+                        // Instrucciones si la condición es falsa<br>
+                    }
+                </li>
+                <li>
+                    <b>SWITCH</b>: Se usa para realizar distintas acciones en distintas condiciones. <br>
+                    Ejemplo: <br>
+                    switch(valor){<br>
+                        case valor1:<br>
+                        // Instrucciones para el valor1<br>
+                        break;<br>
+                        case valor2:<br>
+                        // Instrucciones para el valor2<br>
+                        break;<br>
+                        case valor3:<br>
+                        // Instrucciones para el valor3<br>
+                        break;<br>
+                        default:<br>
+                        // Instrucciones en caso de que no se cumpla ninguna condición<br>
+                    } 
+                </li>
+                <li>
+                    <b>FOR</b>: Nos permite ejecutar el código un número definido de veces.<br>
+                    Ejemplo:<br>
+                    for(inicialización; condición; actualización){<br>
+                        // Código que se repite<br>
+                    } 
+                </li>
+                <li>
+                    <b>WHILE</b>: Permite ejecutar un bloque de código si se cumplen las condiciones señaladas entre paréntesis. <br>
+                    Ejemplo: <br>
+                    while(condición){<br>
+                        // Código a ejecutar<br>
+                    }
+                </li>
+                <li>
+                    <b>DO/WHILE</b>: Su diferencia con while, es que necesariamente debe ejecutarse 1 vez, luego puede ejecutarse las veces que las condiciones lo indiquen.<br>
+                    Ejemplo:<br>
+                    do{<br> 
+                        // Código a ejecutar<br>
+                    }while(condición); // Hasta que...
+                </li>
+                <li>
+                    <b>Sentencias break y continue</b>: Manipulan la secuencia de un programa. <br>
+                   <b>Break</b>: Salir o saltar un bucle, finalizándolo. <br>
+                   Ejemplo: <br>
+                   var i = 0;<br>
+                    for(i = 0; i < 10; i++){<br>
+                        if (i == 5){ // Cuando i llega a 5 se ejecuta el break y sale del bucle for<br>
+                        break;<br>
+                    }<br>
+                   <b>Continue</b>: Saltar hasta la siguiente iteración de un bucle o más. <br>
+                   Ejemplo: <br>
+                   var i = 0;<br>
+                    for(i = 0; i < 10; i++){<br>
+                        if (i == 5 || i == 7){<br>
+                        continue; // Saltar iteración si i vale 5 o 7 (no ejecutará el alert)<br>
+                    }
+                </li>
+                <li>
+                    <b>FOREACH</b>: Ejecuta la función indicada una vez por cada elemento presente, en orden ascendente de un array.<br>
+                    Ejemplo:<br>
+                    const array = ['a', 'b', 'c'];<br>
+                    array.forEach(elemento => console.log(elemento));<br>
+                    // Salida: "a"<br>
+                    // Salida: "b"<br>
+                    // Salida: "c"
+                </li>
+            </ul>
+            <div class="7">
+                <h2>7) ¿Qué es el objeto dom en JS? Y ¿Cómo trabaja?</h2>
+                <p>
+                    <b>DOM: Document Object Model.</b> Cuando hablamos de DOM, nos estamos refiriendo a una estructura o interfaz de programación, que nos permite crear, modificar, cambiar o eliminar los elementos de nuestro documento desde JavaScript. O también podemos añadir eventos a nuestros elementos para hacer nuestra página más dinámica.
+                    Esta interfaz trabaja vinculando JavaScript con nuestro código fuente de HTML, lo que hace que JavaScript tenga acceso a cualquier elemento de nuestro documento HTML y ejecute todas sus funciones en elementos HTML individuales. Esta combinación HTML-JS sirve para darnos un diseño de página web interactivo.
+                </p>
+            </div>
+            <div class="8">
+                <h2>8) ¿Qué función tiene en JS el Object Map?</h2>
+                <p>
+                    Object Map es una definición de clave-valor en la que se puede utilizar cualquier tipo como clave. Esta es una de las propiedades más importantes de los mapas y su principal diferencia con los objetos, donde  las claves solo pueden ser cadenas de texto.
+                    Este método cumple la función de aplicar cambios a nuestros elementos, ya sea una operación matemática o cualquier otro tipo de operación que necesitemos realizar.
+                </p>
+            </div>
+            <div class="9">
+                <h2>9) ¿Cuáles son todos los eventos que trabaja JS?</h2>
+                <h4>Los eventos que trabaja JavaScript son:</h4>
+                <ul>
+                    <li><b>onblur</b>: Un elemento pierde el foco.</li>
+                    <li><b>onchange</b>: Un elemento ha sido modificado.</li>
+                    <li><b>onclick</b>: Pulsar y soltar el mouse.</li>
+                    <li><b>ondblclick</b>: Pulsar dos veces seguidas con el mouse.</li>
+                    <li><b>onfocus</b>: Un elemento obtiene el foco.</li>
+                    <li><b>onkeydown</b>: Pulsar una tecla y no soltarla.</li>
+                    <li><b>onkeypress</b>: Pulsar una tecla.</li>
+                    <li><b>onkeyup</b>: Soltar una tecla pulsada.</li>
+                    <li><b>onload</b>: Página cargada completamente.</li>
+                    <li><b>onmousedown</b>: Pulsar un botón del mouse y no soltarlo.</li>
+                    <li><b>onmousemove</b>: Mover el mouse.</li>
+                    <li><b>onmouseout</b>: El mouse "sale" del elemento.</li>
+                    <li><b>onmouseover</b>: El mouse "entra" en el elemento.</li>
+                    <li><b>onmouseup</b>: Soltar el botón del mouse.</li>
+                    <li><b>onreset</b>: Inicializar un formulario.</li>
+                    <li><b>onresize</b>: Modificar el tamaño de la ventana.</li>
+                    <li><b>onselect</b>: Seleccionar un texto.</li>
+                    <li><b>onsubmit</b>: Enviar el formulario.</li>
+                    <li><b>onunload</b>: Se abandona la página, por ejemplo al cerrar el navegador.</li>
+                </ul>
+            </div>
+            <div class="10">
+                <h2>10) Con toda la investigación que generaron deben de generar un formulario que realice las siguientes funciones.</h2>
+                <h2> a. Qué obtenga los datos del input.</h2>
+                <h2>b. Qué verifique los datos que se ingresan en el input.</h2>
+                <h2>c. Qué el formulario presente una calculo de sumatoria para validar qué no sos un robot.</h2>
+                <form class="formulario" name="form" action="#" method="POST" onsubmit="return validar()";>
+                    <div class="contenedor">
+                        <h1 class="datos">Completá tus datos</h1>
+                        <div class="input_cont">
+                            <label for="nombre" id="nombre">Nombre</label><br>
+                            <input type="text" placeholder="Solo letras" title="Deben ser 2 letras mínimo" name="nombre" pattern="[A-Za-z]{2,254}">
+                        </div>
+                        <br>
+                        <div class="input_cont">
+                            <label for="edad" id="edad">Edad</label><br>
+                            <input type="number" placeholder="Solo números" title="1 a 101 años" name="edad" min="1" max="101" required pattern="[1-9]">
+                        </div>
+                        <br>
+                        <div class="input_cont">
+                            <label for="email" id="email">Correo Electrónico</label><br>
+                            <input type="email" name="email" placeholder="ejemplo@mail.com" required="">
+                        </div>
+                        <br>
+                        <div class="input_cont">
+                            <label for="contra" id="contra">Contraseña</label><br>
+                            <input type="password" required pattern="[a-z]{4}[0-9]{3}" placeholder="4 letras minúsculas y 3 números" title="El formato obligatoriamente debe contener 4 letras minúsculas y 3 números" name="contra">
+                        </div>
+                        
+                        <div class="caja_robot">
+                            <h3 class="robot">¿Eres un robot?</h3>
+                            <h4 class="robot">Realiza un cálculo de sumatoria para comprobarlo...</h4>
+                            <label for="num1">Número1:</label> <br>
+                            <input type="number" id="num1" placeholder="Solo números" required="" onchange="suma(this.value);"> <br>
+                            <label for="num2">Número 2:</label>
+                             <br>
+                             <input type="number" placeholder="Solo números" required="" id="num2" onchange="suma(this.value);">
+                             <br>
+                            <span>El resultado es: </span> <span id="resul"></span>
+                        </div>
+                        <br>
+                        <div class="input_cont">
+                            <button type="submit" class="boton" value="Iniciar Sesión" id="guardar" onclick="validar();">Iniciar Sesión</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
